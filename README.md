@@ -1,12 +1,12 @@
-# JavaScript
+## What is JavaScript
 
-- JavaScript is a **synchronous single threaded language**.
+- JavaScript is a **synchronous, single threaded language**.
 - JavaScript is a **Dynamic typed language**.
 - JavaScript has **first class function**.
 
-Function can be treated like any other variable. Example: Function can be passed as an argument to other functions, can be returned by another function and can be assigned as value to variable.
+👉 **First class function** means function is just like any other variable: can be passed as argument, return by another function and can be assign as a value to a variable.
 
-### ECMAScript
+## ECMAScript and JavaScript
 
 ECMAScript is a specification, JavaScript is programming language that confirms to this specification. The first version of ECMAScript was released in 1997.
 
@@ -31,7 +31,8 @@ Placing `script` in the end of `body` section gives you few advantages.
 
 ![script async](https://github.com/isandeepbansal/javascript/blob/main/assets/script-async.png)
 
-**`<script defer>`** defer downloads the file during HTML parsing and will only execute it after the parser has completed. defer scripts are also guarenteed to execute in the order that they appear in the document.
+**`<script defer>`** defer downloads the file during HTML parsing and will only execute it after the parser has completed. **defer scripts are also guarenteed to execute in the order that they appear in the document**.
 
 ![script defer](https://github.com/isandeepbansal/javascript/blob/main/assets/script-defer.png)
 
+## Statement vs declaration vs expression
