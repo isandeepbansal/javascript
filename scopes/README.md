@@ -7,6 +7,31 @@ Scoping is a concept in programming langauge that refers where to look for thing
 
 JavaScript uses **Lexical scoping** to resolve the identifiers in program. The scope is determined when the code is compiled.
 
-## Compilation & Scope
+## Compilation & Scope phase
 
-![scope](https://github.com/isandeepbansal/javascript/blob/main/assets/scope.png)
+```js
+🔴 var teacher = "kyle";
+
+🔴 function otherClass() {
+   🟢 var teacher = "Suzy";
+    console.log("Welcome");
+}
+
+🔴 function ask() {
+    🟡 var question = "Why?";
+    console.log(question);
+}
+
+otherClass();
+ask();
+```
+
+```
+🔴 Global scope
+    🟢 Local scope `otherClass`
+    🟡 Local scope `ask`
+```
+
+## Execution phase
+
+**An identifier can have only in two roles target (receiving a value) or source (giving up a value)**
