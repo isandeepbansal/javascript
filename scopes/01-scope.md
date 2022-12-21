@@ -7,7 +7,7 @@ Scoping is a concept in programming langauge that refers where to look for thing
 
 JavaScript uses **Lexical scoping** to resolve the identifiers in program. JavaScript's scope is determined at complied time.
 
-👉 JavaScript creates scope for **functions** and **blocks** (only in case let and const). Scopes can be nested as well.
+👉 JavaScript creates scope for **functions** and **blocks** (only in case of let and const). Scopes can be nested as well.
 
 ```js
 🔴 var teacher = "kyle";
@@ -32,6 +32,7 @@ ask();
 ```
 
 ```js
+// These are are the coloured bucket (functions & blocks)
 🔴 Global scope
     🔵 Function scope `otherClass`
         🟢 Function scope `ask`
@@ -40,14 +41,14 @@ ask();
 
 # Dynamic global variables
 
-**Dynamic global variables are created at run-time** not at compiled time. Depends upon the position of variable scope is decided.
+**Dynamic global variables are created at run-time** not at compiled time.
 
 ```js
 🔴 var teacher = "Kyle";
 
 🔴 function otherClass() {
     🔴 teacher = "Suzy";
-    topic = "React";
+    topic = "React"; // dynamic global variable crated at global scope: RED
     console.log("Welcome!");
 }
 
@@ -59,7 +60,11 @@ topic; // React
 
 # Strict mode
 
-**Dynamic global variables are not allowed in strict mode**.
+Strict mode throws an error which were silent in sloppy mode.
+
+- Dynamic global variable throws an error in strict mode.
+- Writing read-only properties are not allowed.
+- Cannot delete variable using delete operator.
 
 ```js
 var teacher = "Kyle";
@@ -72,3 +77,9 @@ function otherClass() {
 
 otherClass();
 ```
+
+# Undefined vs undeclared
+
+**Undefined** means a variable exists but at the moment it has no value. **Undeclared** means a variable doesn't exists in any of the scope that we have access to.
+
+# Lexical elevator
