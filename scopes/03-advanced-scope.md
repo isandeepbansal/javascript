@@ -36,9 +36,9 @@ console.log(teacher); // Kyle
 👉 Because IIFE is an expression and block is a statement IIFE has one advantage that it can be used in statement as well.
 
 ```js
-var teacher = function getTeacherName() {
+var teacher = (function getTeacherName() {
   return "Kyle";
-};
+})();
 ```
 
 # `let` or `var` (`let` is not a new `var`)

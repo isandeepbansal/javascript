@@ -23,7 +23,7 @@ Function expression can be:
 
 👉 You should always, always use named function expressions because of the following reasons.
 
-- Reliable function self-reference (recursion, etc): named function expression are more reliable self reference first its only accessible in their own scope and its a ready only.
+- Reliable function self-reference (recursion, etc): named function expression are more reliable self reference, its only accessible in their own scope and its a ready only.
 
 - More debuggable stack traces: naming function can make debugging process easy by showing up function name in stack trace instead of anonymous function.
 

@@ -5,7 +5,7 @@ Scoping is a concept in programming langauge that refers where to look for thing
 - Lexical scoping (static scoping)
 - Dynamic scoping
 
-JavaScript uses **Lexical scoping** to resolve the identifiers in program. JavaScript's scope is determined at complied time.
+JavaScript use **Lexical scoping** to resolve the identifiers in program. JavaScript's scope is determined at complied time.
 
 👉 JavaScript creates scope for **functions** and **blocks** (only in case of let and const). Scopes can be nested as well.
 
