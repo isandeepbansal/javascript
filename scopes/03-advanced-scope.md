@@ -88,6 +88,65 @@ fruits = "apple, grapes"; // TypeError: Assignment to constant variable
 otherClass = "Suzy"; // TypeError: Assignment to constant variable
 ```
 
+## What is hoisting?
+
+JavaScript is a **lexical scoped langauge** which means during first pass (parsing) it setup a scope for all identifiers in program with some placeholder (undefined) and when it start executing the code variables are already known at that time.
+
+## variable (with var) hoisting
+
+Variables declared with `var` intially initialized with undefined.
+
+```js
+student; // undefined
+teacher; // undefined
+
+var student = "you";
+var teacher = "Kyle";
+```
+
+## Function declaration & expression hoisting
+
+Function declaration intially initialized with its definition or function body.
+
+```js
+teacher(); // Kyle
+otherTeacher(); // TypeError
+
+// teacher stores with function body
+function teacher() {
+  console.log("Kyle");
+}
+
+// otherTeacher set to undefined during first pass
+var otherTeacher = function () {
+  console.log("Suzy");
+};
+```
+
+## `let` and `const` hoisting
+
+Variables declare with `let` and `const` keyword do not get initialized during first pass it is in uninitialized state and it doesn't get initialized until it run accross the let or const declaration.
+
+Accessing variable before initialization throws an error TDZ (temporal dead zone).
+
+```js
+teacher; // ReferenceError (TDZ): Cannot access 'teacher' before initialization
+let teacher = "Kyle";
+
+{
+  otherTeacher; // ReferenceError (TDZ): Cannot access 'otherTeacher' before initialization
+  let otherTeacher = "Suzy";
+}
+```
+
+```js
+otherTeacher(); // ReferenceError (TDZ): Cannot access 'otherTeacher' before initialization
+
+let otherTeacher = function () {
+  console.log("Suzy");
+};
+```
+
 ## Key points to remember
 
 - Scopes are great way to hide things by using IIFE and block scope.
