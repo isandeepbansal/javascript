@@ -1,4 +1,4 @@
-# Scope
+## Scope
 
 Scoping is a concept in programming langauge that refers where to look for things (identifiers) at execution time. Mainly there are two types of scoping:
 
@@ -39,7 +39,7 @@ ask();
             🟡 block scope
 ```
 
-# Dynamic global variables
+## Dynamic global variables
 
 **Dynamic global variables are created at run-time** not at compiled time.
 
@@ -58,7 +58,7 @@ teacher; // Suzy
 topic; // React
 ```
 
-# Strict mode
+## Strict mode
 
 Strict mode throws an error which were silent in sloppy mode.
 
@@ -78,8 +78,8 @@ function otherClass() {
 otherClass();
 ```
 
-# Undefined vs undeclared
+## Undefined vs undeclared
 
 **Undefined** means a variable exists but at the moment it has no value. **Undeclared** means a variable doesn't exists in any of the scope that we have access to.
 
-# Lexical elevator
+## Lexical elevator

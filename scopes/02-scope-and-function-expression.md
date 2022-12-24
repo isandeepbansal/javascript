@@ -1,4 +1,4 @@
-# Scope & function expressions
+## Scope & function expressions
 
 If the word `function` is literally the first thing in the statement its a function declaration and if it's not the first thing in the statement its a function expression.
 
@@ -40,6 +40,6 @@ Arrow function expression has a shorter syntax for declaring traditional functio
 - Arrow funcion cannot be used as constructor calling them with `new` operator throws a TypeError.
 - Arrow functions cannot use `yield` within their body and cannot be created as generator functions.
 
-# Function types hierarchy
+## Function types hierarchy
 
 **(Named) function declaration > named function expression > anonymous function expression**
