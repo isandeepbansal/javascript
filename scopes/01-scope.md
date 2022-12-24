@@ -5,7 +5,7 @@ Scoping is a concept in programming langauge that refers where to look for thing
 - Lexical scoping (static scoping)
 - Dynamic scoping
 
-JavaScript use **Lexical scoping** to resolve the identifiers in program. JavaScript's scope is determined at complied time.
+JavaScript use **Lexical scoping** to resolve the identifiers in program. JavaScript's scope is determined at complied time and its fixed and predictable.
 
 👉 JavaScript creates scope for **functions** and **blocks** (only in case of let and const). Scopes can be nested as well.
 
@@ -83,3 +83,9 @@ otherClass();
 **Undefined** means a variable exists but at the moment it has no value. **Undeclared** means a variable doesn't exists in any of the scope that we have access to.
 
 ## Lexical elevator
+
+## Key points to remember
+
+- Scope refers where to look for identifiers during execution. Lexical scoped language has a fixed and predictable scope.
+- JavaScript creates a scope plan during first phase and this plan used during execution phase.
+- non strict mode allows global dynamic variables.

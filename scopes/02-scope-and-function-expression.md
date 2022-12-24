@@ -43,3 +43,9 @@ Arrow function expression has a shorter syntax for declaring traditional functio
 ## Function types hierarchy
 
 **(Named) function declaration > named function expression > anonymous function expression**
+
+## Key points to remember
+
+- Function declaration attached their indentifier with enclosing scope.
+- Function expression attach their identifier to their on scope & its read only.
+- You should always always use named function expression instead of anonymous function expressions.

@@ -67,3 +67,9 @@ function formatStr(str) {
   return str.slice(4);
 }
 ```
+
+## Key points to remember
+
+- Scopes are great way to hide things by using IIFE and block scope.
+- Block scope is only created when `let` or `var` used in it.
+- `let` is not a replacement of `var`.
