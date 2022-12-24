@@ -41,8 +41,29 @@ var teacher = (function getTeacherName() {
 })();
 ```
 
-# `let` or `var` (`let` is not a new `var`)
+## `let` or `var` (`let` is not a new `var`)
 
-Whenever you want to access your variable throughout the whole scope `var` is a right choice as well more semantic.
+If variable is belongs to the entire scope of a function, the correct semantic way to signal that to your reader is `var`. If variable is belongs to the block like (for, if and etc.) use `let`. Unlike `let` `var` can be used reused multiple times in a scope.
 
-Whenever you want to access your variable within particular block `let` is a right choice as well more semantic.
+👉 Both have semantic and behavioral reasons attached to them and you should use either of them accordingly, instead of using `let` everywhere.
+
+## Explicit let block
+
+If you want to use `let` you can wrap them inside a block which makes it very obvious to the reader of code that these variables are only exist for this particular block.
+
+```js
+function formatStr(str) {
+  {
+    let prefix, res;
+    prefix = str.slice(0, 3);
+    rest = str.slice(3);
+    str = prefix.toUpperCase() + rest;
+  }
+
+  if (/^FOO:/.test(str)) {
+    return str;
+  }
+
+  return str.slice(4);
+}
+```
