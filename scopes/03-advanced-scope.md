@@ -68,6 +68,26 @@ function formatStr(str) {
 }
 ```
 
+## const keyword
+
+Variable declared with `const` keyword cannot be redeclared or reassgin it but you can change or mutate the non primitive type values.
+
+```js
+// Primitive values with const
+const PI = 3.14;
+PI = 3.145; // TypeError: Assignment to constant variable
+
+// Non primitive values with const
+const fruits = ["apple", "grapes"];
+fruits.push("oranges");
+
+const otherClass = { teacher: "Kyle" };
+otherClass.teacher = "Suzy";
+
+fruits = "apple, grapes"; // TypeError: Assignment to constant variable
+otherClass = "Suzy"; // TypeError: Assignment to constant variable
+```
+
 ## Key points to remember
 
 - Scopes are great way to hide things by using IIFE and block scope.
