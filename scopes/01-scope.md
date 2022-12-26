@@ -39,6 +39,8 @@ ask();
             🟡 block scope
 ```
 
+**Lexical scope means that a function can reference a variable outside of its scope and it just goes up the scope chain to find it.**
+
 ## Dynamic global variables
 
 **Dynamic global variables are created at run-time** not at compiled time.
@@ -81,8 +83,6 @@ otherClass();
 ## Undefined vs undeclared
 
 **Undefined** means a variable exists but at the moment it has no value. **Undeclared** means a variable doesn't exists in any of the scope that we have access to.
-
-## Lexical elevator
 
 ## Key points to remember
 
