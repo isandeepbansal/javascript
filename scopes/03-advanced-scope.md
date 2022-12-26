@@ -147,6 +147,8 @@ let otherTeacher = function () {
 };
 ```
 
+👉 You can take advantage of hoisting for function declaration by putting all function executable code at the top of each scope. While variable hoisting is not recommended you should declare all variables at the top of the each scope.
+
 ## Key points to remember
 
 - Scopes are great way to hide things by using IIFE and block scope.
