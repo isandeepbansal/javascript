@@ -53,4 +53,4 @@ for (let i = 1; i <= 3; i++) {
 }
 ```
 
-👉 It is inevitable for a language like JavaScript don't have closures feature in it, because JavaScript is a lexical scoped language with first class functions and it would be very weird when a function is return and it looses its original lexical scope.
+👉 It is inevitable for a language like JavaScript no to have a closure in it, because JavaScript is a lexical scoped language and have first class functions and it would be very weird if a function is return and it start loosing its original lexical scope.
