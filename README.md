@@ -36,3 +36,9 @@ Placing `script` in the end of `body` section gives you few advantages.
 ![script defer](https://github.com/isandeepbansal/javascript/blob/main/assets/script-defer.png)
 
 ## Statement vs declaration vs expression
+
+## TypeError vs ReferenceError
+
+ReferenceError: represents you're trying to access a variable which doesn't exists in any of the scope we have access to.
+
+TypeError: represents you're performing a invalid operation on a value.

@@ -13,7 +13,7 @@ JavaScript use **Lexical scoping** to resolve the identifiers in program. JavaSc
 🔴 var teacher = "kyle";
 
 🔴 function otherClass() {
-    🔵 var teacher = "Suzy";
+    🔵 var teacher = "Suzy"; // variable shadowing
 
     🔵 function ask(question) {
         console.log(🔵 teacher, 🟢 question);

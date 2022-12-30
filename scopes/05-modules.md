@@ -4,7 +4,7 @@ Modules encapsulate data and behavior (methods) together. The state (data) of a 
 
 ## Classic/Revealing module pattern
 
-This is a example of module pattern using IIFE where only ask method is available outside. This can also be considered as singleton pattern. This is a using closure.
+This is a example of module pattern using IIFE where only ask method is available outside. This can also be considered as singleton pattern. This is using a closure.
 
 ```js
 var workshop = (function Module(teacher) {
