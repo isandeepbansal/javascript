@@ -71,3 +71,63 @@ setTimeout(workshop.ask, 10, "Lost this?");
 setTimeout(workshop.ask.bind(workshop), 10, "Hard bound this?");
 // Kyle Hard bound this?
 ```
+
+## 3. constuctor call
+
+- Create a brand new empty object.
+- \*Link that object to another object.
+- Call function with `this` set to the new object.
+- If function does not return an object, assume return of `this`.
+
+```js
+function ask(question) {
+  console.log(this.teacher, question);
+}
+
+var newEmptyObject = new ask("What is 'new' doing here?");
+// undefined what is 'new' doing here?
+```
+
+## 4. Default binding
+
+Default binding is the fallback when none of the three rules doesn't match in non-strict mode `this` refers to global object and in strict its undefined.
+
+```js
+var teacher = "Kyle";
+
+function ask(question) {
+  console.log(this.teacher, question);
+}
+
+function askAgain(question) {
+  "use strict";
+  console.log(this.teacher, question);
+}
+
+ask("What's the non-strict-mode default?");
+// Kyle What's the non-strict-mode default?
+
+askAgain("What's the strict-mode default?");
+// TypeError
+```
+
+## Binding precedence
+
+If more than one rule matches a call site, the order of precendence is:
+
+1. Is the function called by `new`?
+2. Is the function called by `call`, `apply` & `bind`?
+3. Is the function called on a context object?
+4. DEFAULT: global object (except strict mode)
+
+```js
+var workshop = {
+  teacher: "Kyle",
+  ask: function ask(question) {
+    console.log(this.teacher, question);
+  },
+};
+
+new (workshop.ask.bind(workshop))("What does this do?");
+// undefined what does this do?
+```
