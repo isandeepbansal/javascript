@@ -115,7 +115,7 @@ isNaN("hello world"); // true
 
 ```js
 Number.isNaN(NaN); // true
-Number.isNaN("hello world"); // true
+Number.isNaN("hello world"); // false
 ```
 
 ## Negative zero
