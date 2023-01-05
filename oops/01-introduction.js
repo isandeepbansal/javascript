@@ -54,3 +54,30 @@ console.log(circle.constructor); // ƒ Circle(radius) { }
 console.log(createCircle.constructor); // ƒ Function() { [native code] }
 console.log(createCircle.name); // createCircle
 console.log(createCircle.length); // length of arguments
+
+/**
+ * Value vs Reference types
+ * ------------------------
+ * Objects are reference types and primitive types are value types
+ */
+
+var valueType = 10;
+var referenceType = { value: 10 };
+var tempValueType = valueType;
+var tempReferenceType = referenceType;
+
+tempValueType = 20;
+tempReferenceType.value = 20;
+
+console.log(valueType, tempValueType);
+console.log(referenceType, tempReferenceType);
+
+/**
+ * Enumerating properties
+ * ----------------------
+ * For in loop
+ */
+
+for (let key in circle) {
+  console.log("Enumerating properties:", circle[key]);
+}
